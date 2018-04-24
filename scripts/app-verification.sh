@@ -2,7 +2,7 @@
 URL="localhost:8080/restservice/hello/someone"
 retry=0
 
-until [ $retry -ge 5 ]
+until [ $retry -ge 10 ]
 do
 	if curl -s -I -m 10 $URL | grep "200 OK"
 	then
@@ -12,6 +12,7 @@ do
 
 	retry=$[$retry+1]
 	sleep 10
+	date
 	echo "Application not starting, run another attempt."
 done
 
