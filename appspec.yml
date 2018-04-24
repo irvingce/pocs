@@ -7,12 +7,9 @@ hooks:
    BeforeInstall:
       - location: scripts/app-stop.sh
         timeout: 10
-        runas: root
    ApplicationStart:
       - location: scripts/app-start.sh
         timeout: 60
-        runas: root
    ValidateService:
       - location: scripts/app-verification.sh
         timeout: 60
-        runas: ubuntu
