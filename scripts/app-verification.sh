@@ -2,7 +2,7 @@
 URL="localhost:8080/restservice/hello/someone"
 retry=0
 
-until [ $retry -ge 10 ]
+until [ $retry -ge 25 ]
 do
 	if curl -s -I -m 10 $URL | grep "200 OK"
 	then
