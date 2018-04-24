@@ -2,7 +2,7 @@
 URL="localhost:8080/restservice/hello/someone"
 retry=0
 
-until [ $retry -ge 8 ]
+until [ $retry -ge 10 ]
 do
 	if curl -s -I $URL | grep "200 OK"
 	then
@@ -11,7 +11,7 @@ do
 	fi
 
 	retry=$[$retry+1]
-	sleep 5
+	sleep 20
 done
 
 echo "Application did not response".
