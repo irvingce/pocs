@@ -12,4 +12,10 @@ public class HelloService {
 	public String sayHello(@PathParam("name") String name) {
 		return "Hello "+name;
 	}
+	
+	@GET
+	@Path("/spanish")
+	public String sayHola() {
+		return "Hola Amigo";
+	}
 }
